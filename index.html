@@ -15,7 +15,7 @@
                 <button type="button" name="button" @click="addItem">Aggiungi</button>
                 <div class="list-container">
                     <ul class="box-list">
-                        <li v-for="(item, index) in itemLista" @click="isClicked" v-bind:class="['normal', {'red': isRed}]">
+                        <li v-for="(item, index) in itemLista" @click:="changeColor" v-bind:class="{'is-blue': isClicked, 'is-red': !isClicked}">
                             {{itemLista[index]}}
                             <i class="fas fa-times" @click="removeItem(index)"></i>
                         </li>

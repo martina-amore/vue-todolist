@@ -3,7 +3,7 @@ const root = new Vue({
     data: {
         itemUtente: "",
         itemLista: [],
-        isRed: false,
+        isClicked: false,
     },
     methods: {
         addItem: function() {
@@ -12,13 +12,8 @@ const root = new Vue({
         removeItem: function(cancelIndex){
 			this.itemLista.splice(cancelIndex, 1);
 		},
-        isClicked: function(){
-			if (this.isRed == true) {
-                return false;
-            }
-            else {
-                return true;
-            }
+        changeColor: function(){
+            this.isClicked = !this.isClicked;
 		}
     }
 })

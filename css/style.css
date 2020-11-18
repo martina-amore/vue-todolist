@@ -49,6 +49,7 @@ button {
     padding: 10px;
     list-style-type: none;
     border-bottom: 1px solid lightgrey;
+    border-radius: 5px;
 }
 
 .red {
@@ -58,6 +59,15 @@ button {
 .fa-times {
     float: right;
 }
+
+.is-red{
+    background-color: red;
+};
+
+.is-blue{
+    background-color: blue;
+}
+
 
 /* .flex {
     display: flex;
