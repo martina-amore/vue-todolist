@@ -17,7 +17,7 @@
                     <ul class="box-list">
                         <li v-for="(item, index) in itemLista" @click="isClicked" v-bind:class="['normal', {'red': isRed}]">
                             {{itemLista[index]}}
-                            <i class="fas fa-times" @click="removeItem"></i>
+                            <i class="fas fa-times" @click="removeItem(index)"></i>
                         </li>
                     </ul>
                 </div>
