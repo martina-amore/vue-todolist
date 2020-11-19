@@ -2,22 +2,22 @@ const root = new Vue({
     el: "#root",
     data: {
         itemUtente: "",
-        itemLista: [],
-        isClicked: []
+        itemLista: []
     },
     methods: {
         addItem: function() {
-            this.itemLista.push(this.itemUtente);
+            this.itemLista.push(
+                {
+                  text: this.itemUtente,
+                  colored: false
+            });
             this.itemUtente = "";
-            this.isClicked.push(false);
         },
         removeItem: function(cancelIndex){
 			this.itemLista.splice(cancelIndex, 1);
-            this.isClicked.splice(cancelIndex, 1);
 		},
         changeColor: function(index){
-            console.log(this.isClicked);
-            Vue.set(this.isClicked, index, !this.isClicked[index]);
+            this.itemLista[index].colored = !this.itemLista[index].colored;
 		},
         display: function() {
             if (this.itemLista.length === 0) {
