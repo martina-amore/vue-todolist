@@ -52,8 +52,8 @@ button {
     border-radius: 5px;
 }
 
-.red {
-    background-color: red;
+.active {
+    background-color: lightblue;
 }
 
 .fa-times {
@@ -61,13 +61,13 @@ button {
     cursor: pointer;
 }
 
-.is-red{
+/* .is-red{
     background-color: red;
 };
 
 .is-blue{
     background-color: blue;
-}
+} */
 
 
 /* .flex {
