@@ -58,6 +58,7 @@ button {
 
 .fa-times {
     float: right;
+    cursor: pointer;
 }
 
 .is-red{
